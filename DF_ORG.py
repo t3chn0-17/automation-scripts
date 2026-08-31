@@ -121,7 +121,17 @@ async def file_handler():
         done_files.append(file_to_copy.resolve())
         continue
 
-      move(file_to_copy, destination)
+      try:
+        move(file_to_copy, destination)
+
+      except PermissionError:
+        print(f"File is currently in use: {file_to_copy.name}")
+        continue
+
+      except FileNotFoundError:
+        print(f"File disappeared before it could be moved: {file_to_copy.name}")
+        continue
+      
       done_files.append(file_to_copy.resolve())
       print(f"Added {file_to_copy.name} to {file_type}")
 
