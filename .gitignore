@@ -10,6 +10,7 @@
 *.sw?
 
 *.txt
+output1
 output
 ftp_shared_folder
 FTP_Server.py
