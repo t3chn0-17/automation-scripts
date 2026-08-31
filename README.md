@@ -9,7 +9,7 @@ Python automation scripts to do boring work faster and automatically.
 ## Done Scripts
 
 **DF_ORG.py**: organizes files and put them in a folder based on their type
-DF_ORG Release: [Download Link]("")
+DF_ORG Release: [Download Link](https://github.com/t3chn0-17/automation-scripts/releases/download/v0.1.0/DF_ORG.exe)
 
 ---
 
