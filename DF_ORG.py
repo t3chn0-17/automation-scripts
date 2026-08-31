@@ -37,9 +37,6 @@ created_dirs = [
   executables_dir, temp_files_dir, another_dir
 ]
 
-for x_dir in created_dirs:
-  x_dir.mkdir(parents=True, exist_ok=True)
-
 def recently_modified(
   file_path: Path,
   seconds: float = 5,
@@ -92,6 +89,9 @@ def check_file_type(file_path: Path) -> str:
 
 async def file_handler():
   while True:
+    for x_dir in created_dirs:
+      x_dir.mkdir(parents=True, exist_ok=True)
+
     await asyncio.sleep(3)
 
     stable_files.clear()
