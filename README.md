@@ -1,4 +1,4 @@
-# Modusy Music Player
+# Python Automation Scripts
 
 ## About
 
